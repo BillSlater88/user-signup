@@ -78,7 +78,7 @@ def validate_information():
 
     if not proper_length(password):
         password_error = 'Your password must be between 3 and 20 characters.'
-        password = ''
+        
 
     
     if password != password_check:
@@ -95,7 +95,7 @@ def validate_information():
     else:
         return render_template('table.html', username_error=username_error, password_error=password_error,
         password_check_error=password_check_error, email_error=email_error, username=username, 
-        password=password, password_check=password_check, email=email)
+        password='', password_check='', email=email)
         
         
 
